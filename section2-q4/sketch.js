@@ -1,21 +1,45 @@
-// ギリシャ国旗
+
 function setup() {
   const blue = color(0, 51, 160);
   createCanvas(270, 180);
-  // noStroke();
+  noStroke();
   background(255);
 
-  let d = height / 9; // 縞1本の太さ
+  let d = height / 13; // 縞1本の太さ
 
-  for(let i = 0; i < 9; i++){
-    // BLANK[1] (hint: 縞の色を交互に変えるには2で割った余りを使おう)
+  for(let i = 0; i < 13; i++){
+
+    if(i%2==0){
+      fill(255,0,0)
+    }
+    else{
+      fill(255)
+    }
     rect(0, i * d, width, (i + 1) * d);
   }
 
   fill(blue);
-  let size = d * 5;
-  rect(0, 0, size, size);
+  let size = d * 7;
+  rect(0, 0, 120, size);
 
+let e=120/11
+let f=size/9
   fill(255);
-  // BLANK[2] (hint: 白い十字を描くには rect を二つ描こう)
+  for(let e=1/2; e<11; e++){
+  for(let f=1/2; f<9; f++){
+
+    if((e+f)%2==0){
+      fill(blue);
+    }
+    else{
+      fill(255);
+    }
+
+ellipse(e*11,f*9+f,10)
+//上のlet e=1/2とf=1/2、ellipseの中のｙ座標は適当に色々試して出来ただけなので、考えて作れたわけじゃないです。。。
+  }
+  }
+
+
+
 }
