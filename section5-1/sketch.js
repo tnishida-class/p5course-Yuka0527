@@ -13,7 +13,7 @@ function draw(){
     let theta = 360 * i / 12;
     let x = 100 + cos(theta) * 50;
     let y = 100 + sin(theta) * 50;
-  star(x,y);
+  star(250,50,40);
 }}
 
   function star(cx, cy, r){

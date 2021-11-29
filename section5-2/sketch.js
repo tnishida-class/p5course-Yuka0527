@@ -24,7 +24,7 @@ function ngmark(cx, cy, r){
   pop();
 }
 
-function star(cx, cy, r){
+function regularPolygon(n, cx, cy, r){
   beginShape();
   for(var i = 0; i < 5; i++){
     let theta = TWO_PI * i * 2 / 5 - HALF_PI;
